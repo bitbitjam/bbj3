@@ -1,0 +1,10 @@
+# ignore vim swap files
+*.swp
+
+# ignore compiled files
+*.gb
+*.o
+*.pyc
+
+# ignore active vagrant sessions
+.vagrant

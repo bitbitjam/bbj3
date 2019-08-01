@@ -1,0 +1,4 @@
+Requirements to compile:
+-- Windows system
+-- GBDK installed to C:\GBDK. (Or, just change the build.bat file with a different path.)
+

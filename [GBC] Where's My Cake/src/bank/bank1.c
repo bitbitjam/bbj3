@@ -1,0 +1,10 @@
+#include <gb/gb.h>
+#include "../global.h"
+#include "../enemy.c"
+#include "../player.c"
+#include "../map/lv19.c"
+#include "../map/lv20.c"
+#include "../map/lv21.c"
+#include "../map/lv22.c"
+#include "../map/lv23.c"
+#include "../map/lv24.c"

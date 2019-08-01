@@ -1,0 +1,731 @@
+AREA .  .ABS.
+	RADIX HEX
+	BASE 0000
+	SIZE 0000
+	ATTRIB ABS OVR
+	GLOBALS
+		l__HEAP	0000
+		l__BSEG	0000
+		l_.  .ABS.	0000
+		l__GSFINAL	0000
+		l__ISEG	0000
+		s_.  .ABS.	0000
+		l__HOME	0000
+		l__DATA_1	0000
+		l__DATA_2	0000
+		l__DATA_3	0000
+		l__DATA_4	0000
+		l__DATA_5	0000
+		l__DATA_6	0000
+		l__DATA_7	0000
+		l__CODE_6	0000
+		s__HEADER	0000
+		l__CODE_7	0000
+		l__XSEG	0000
+		.init	0000
+		l__OVERLAY	0000
+		l__LIT	0000
+		s__SFR	0000
+		l__GSINITTAIL	0001
+		l__GSINIT	0018
+		l__BSS	0096
+		l__DATA	00C7
+		l__HEADER	01E1
+		s__CODE	0200
+		l__CODE_2	1EF5
+		l__CODE_5	227D
+		l__CODE_1	22E6
+		l__CODE_4	2598
+		l__CODE_3	25E1
+		l__CODE	3CF1
+		s__HOME	3EF1
+		s__LIT	3EF1
+		s__GSINIT	3EF1
+		s__GSINITTAIL	3F09
+		s__GSFINAL	3F0A
+		s__CODE_1	4000
+		s__CODE_2	4000
+		s__CODE_3	4000
+		s__CODE_4	4000
+		s__CODE_5	4000
+		s__DATA_7	4000
+		s__CODE_6	4000
+		s__CODE_7	4000
+		s__DATA_3	5EF5
+		s__DATA_6	627D
+		s__DATA_2	62E6
+		s__DATA_5	6598
+		s__DATA_4	65E1
+		.OAM	C000
+		s__DATA	C0A0
+		s__BSS	C167
+		s__HEAP	C1FD
+		s__BSEG	C1FD
+		s__ISEG	C1FD
+		s__DATA_1	C1FD
+		s__XSEG	C1FD
+		s__OVERLAY	C1FD
+		.STACK	E000
+		.refresh_OAM	FF80
+		l__SFR	10000
+AREA _CODE
+	RADIX HEX
+	BASE 0200
+	SIZE 3CF1
+	ATTRIB REL CON
+	GLOBALS
+		.set_mode	0200
+		.remove_VBL	0210
+		.remove_LCD	0216
+		.remove_TIM	021C
+		.remove_SIO	0222
+		.remove_JOY	0228
+		.add_VBL	022E
+		.add_LCD	0234
+		.add_TIM	023A
+		.add_SIO	0240
+		.add_JOY	0246
+		.remove_int	024C
+		.add_int	026C
+		.wait_vbl_done	0288
+		_wait_vbl_done	0288
+		_display_off	0299
+		.display_off	0299
+		.serial_IO	02BA
+		_mode	02E9
+		_get_mode	02F2
+		_enable_interrupts	02F7
+		_disable_interrupts	02F9
+		_reset	02FB
+		.reset	02FB
+		_set_interrupts	0301
+		_remove_VBL	030C
+		_remove_LCD	0317
+		_remove_TIM	0322
+		_remove_SIO	032D
+		_remove_JOY	0338
+		_add_VBL	0343
+		_add_LCD	034E
+		_add_TIM	0359
+		_add_SIO	0364
+		_add_JOY	036F
+		_clock	037A
+		__printTStates	0383
+		_main	0384
+		_updateBar	12A0
+		_updateEnemies	1357
+		_moveEnemySprites	1DA5
+		_setProps	1E9A
+		_updatePlayerFrame	1EF1
+		_updatePlayer	1F30
+		_checkCollisions	24E6
+		_collisionCheck	2933
+		_fadeInBkg	2972
+		_fadeOutBkg	2A15
+		_fadeInSprites	2AB8
+		_fadeOutSprites	2B10
+		_performStateChange	2B68
+		_updateScore	2B6B
+		_showValue	2B6E
+		_endGame	2C5E
+		_waitFrames	2C97
+		_switchRomBanks	2CB0
+		_stopAllSounds	2CC8
+		_destroyEnemy	2CFB
+		_instantiatePowerUp	310E
+		_LaunchFireBall	31C8
+		_initGame	324F
+		_blackPalette	33B5
+		_halfPalette	33F5
+		_set_bkg_palette	3435
+		_set_sprite_palette	3460
+		_set_bkg_palette_entry	348B
+		_set_sprite_palette_entry	34B3
+		_cpu_slow	34DB
+		_cpu_fast	34F6
+		_cgb_compatibility	34FD
+		.set_sprite_prop	3546
+		_set_sprite_prop	3553
+		_scroll_bkg	355E
+		_move_win	3574
+		_strcpy	357D
+		_memcpy	358F
+		_strcmp	35AF
+		_rand	35D3
+		_randw	35D3
+		_initrand	35FE
+		.initrand	3600
+		.padup	3609
+		_waitpadup	3609
+		.jpad	3619
+		.wait_pad	3646
+		_joypad	364D
+		_waitpad	3652
+		.mv_sprite	365C
+		_move_sprite	366B
+		_get_win_tiles	3678
+		_get_win_data	368C
+		_get_bkg_data	368C
+		_get_sprite_data	36D9
+		_set_win_data	3709
+		_set_bkg_data	3709
+		_set_sprite_data	3756
+		__divschar	3785
+		__modschar	3791
+		__divsint	379C
+		__modsint	37AD
+		__divuchar	37BC
+		__moduchar	37C8
+		__divuint	37D3
+		__moduint	37E4
+		.mod8	37F3
+		.div8	37F3
+		.mod16	37FB
+		.div16	37FB
+		.modu8	3831
+		.divu8	3831
+		.modu16	3834
+		.divu16	3834
+		_send_byte	3871
+		_receive_byte	3884
+		.copy_vram	3895
+		_get_data	38A4
+		_set_data	38A4
+		_set_win_tiles	38B7
+		_arand	38CB
+		_initarand	38F7
+		_reverse	3924
+		_scroll_win	3992
+		_strncat	39A8
+		.get_xy_wtt	3A3E
+		.get_xy_btt	3A50
+		.get_xy_tt	3A5F
+		_get_tiles	3A90
+		__mulschar	3AA9
+		__muluchar	3AA9
+		__mulsint	3AB5
+		__muluint	3AB5
+		.mulu16	3AC9
+		.mul16	3AC9
+		.get_sprite_tile	3ADF
+		_get_sprite_tile	3AEC
+		.scroll_sprite	3AF5
+		_scroll_sprite	3B06
+		_strncmp	3B13
+		_move_bkg	3BBD
+		.set_xy_wtt	3BC6
+		.set_xy_btt	3BD7
+		.set_xy_tt	3BE6
+		_set_tiles	3C17
+		.set_sprite_tile	3C30
+		_set_sprite_tile	3C3D
+		.delay	3C48
+		_delay	3C82
+		_strcat	3C8B
+		_strncpy	3CFE
+		_get_bkg_tiles	3DB6
+		.get_sprite_prop	3DCA
+		_get_sprite_prop	3DD7
+		_strlen	3DE0
+		.sgb_check	3E18
+		_sgb_check	3E18
+		.sgb_transfer	3E65
+		.hiramcpy	3EC6
+		_hiramcpy	3ECD
+		_set_bkg_tiles	3EDD
+AREA _HEADER
+	RADIX HEX
+	BASE 0000
+	SIZE 01E1
+	ATTRIB ABS OVR
+	GLOBALS
+		_exit	01D1
+AREA _HOME
+	RADIX HEX
+	BASE 3EF1
+	SIZE 0000
+	ATTRIB REL CON
+AREA _LIT
+	RADIX HEX
+	BASE 3EF1
+	SIZE 0000
+	ATTRIB REL CON
+AREA _GSINIT
+	RADIX HEX
+	BASE 3EF1
+	SIZE 0018
+	ATTRIB REL CON
+	GLOBALS
+		gsinit	3EF1
+AREA _GSINITTAIL
+	RADIX HEX
+	BASE 3F09
+	SIZE 0001
+	ATTRIB REL CON
+AREA _GSFINAL
+	RADIX HEX
+	BASE 3F0A
+	SIZE 0000
+	ATTRIB REL CON
+AREA _DATA
+	RADIX HEX
+	BASE C0A0
+	SIZE 00C7
+	ATTRIB REL CON
+	GLOBALS
+		_fireBallX	C0A0
+		_fireBallY	C0A1
+		_fireBallLife	C0A2
+		_fireBallDir	C0A3
+		_debugValueArray	C0A4
+		_walkNoise	C0A6
+		_hMode	C0A7
+		_painNoise	C0A8
+		_superAttacks	C0A9
+		_level	C0AA
+		_i	C0AB
+		_j	C0AC
+		_k	C0AD
+		_l	C0AE
+		_m	C0AF
+		_n	C0B0
+		_tempVal	C0B1
+		_wn	C0B2
+		_ii	C0B3
+		_jj	C0B5
+		_kk	C0B7
+		_ll	C0B9
+		_myDelay	C0BB
+		_screen	C0BC
+		_seed	C0BD
+		_lastKeys	C0BE
+		_globalY	C0BF
+		_screenShake	C0C0
+		_shakeDir	C0C1
+		_maxLevel	C0C2
+		_attackDelay	C0C3
+		_menuX	C0C4
+		_menuY	C0C5
+		_powerUpX	C0C6
+		_powerUpY	C0C7
+		_powerUpType	C0C8
+		_powerUpNoise	C0C9
+		_shadowY	C0CA
+		_conversationTime	C0CB
+		_conversationIndex	C0CC
+		_conversationID	C0CD
+		_currentConversation	C0CE
+		_initBank	C11B
+		_newBank	C11C
+		_scene	C11D
+		_move	C11E
+		_isMoving	C11F
+		_pX	C120
+		_pY	C121
+		_pState	C122
+		_playerFrame	C123
+		_jumpTime	C124
+		_myDamage	C125
+		_punchWindDown	C126
+		_iFrames	C127
+		_HP	C128
+		_MP	C129
+		_eHitIndex	C12A
+		_flipX	C12B
+		_barArray	C12C
+		_fullRow	C130
+		_frameCounter	C144
+		_enemiesRemaining	C145
+		_eTargetX	C146
+		_eTargetY	C149
+		_eX	C14C
+		_eY	C14F
+		_eFrame	C152
+		_eState	C155
+		_eHP	C158
+		_eTime	C15B
+		_eType	C15E
+		_eDamage	C161
+		_eRealType	C164
+AREA _BSS
+	RADIX HEX
+	BASE C167
+	SIZE 0096
+	ATTRIB REL CON
+	GLOBALS
+		__cpu	C167
+		.mode	C168
+		__io_out	C169
+		__io_in	C16A
+		__io_status	C16B
+		.vbl_done	C16C
+		_sys_time	C16D
+		.sys_time	C16D
+		.int_0x40	C16F
+		.int_0x48	C17F
+		.int_0x50	C18F
+		.int_0x58	C19F
+		.int_0x60	C1AF
+		.randhi	C1BF
+		.randlo	C1C0
+AREA _HEAP
+	RADIX HEX
+	BASE C1FD
+	SIZE 0000
+	ATTRIB REL CON
+	GLOBALS
+		_malloc_heap_start	C1FD
+AREA _OVERLAY
+	RADIX HEX
+	BASE C1FD
+	SIZE 0000
+	ATTRIB REL CON
+AREA _ISEG
+	RADIX HEX
+	BASE C1FD
+	SIZE 0000
+	ATTRIB REL CON
+AREA _BSEG
+	RADIX HEX
+	BASE C1FD
+	SIZE 0000
+	ATTRIB REL CON
+AREA _XSEG
+	RADIX HEX
+	BASE C1FD
+	SIZE 0000
+	ATTRIB REL CON
+AREA _DATA_1
+	RADIX HEX
+	BASE C1FD
+	SIZE 0000
+	ATTRIB REL CON
+AREA _CODE_1
+	RADIX HEX
+	BASE 4000
+	SIZE 22E6
+	ATTRIB REL CON
+	GLOBALS
+		_preTitleScreen	487C
+		_refreshLogoMap	4E7C
+		_titleScreenTileData	4F9E
+		_titleScreenTiles	5F9E
+		_titleScreenColours	6106
+		_introPalette	626E
+AREA _DATA_2
+	RADIX HEX
+	BASE 62E6
+	SIZE 0000
+	ATTRIB REL CON
+AREA _CODE_2
+	RADIX HEX
+	BASE 4000
+	SIZE 1EF5
+	ATTRIB REL CON
+	GLOBALS
+		_nextConversation	481E
+		_skipSprites	495F
+		_intermissionBkgData	49DF
+		_diamonds	59DF
+		_colourDiamonds	59E3
+		_blankRow	59E7
+		_queenBaseSprite	5A06
+		_queenClosedEyes	5A3C
+		_queenOpenEyes	5A44
+		_queenMouthClosed	5A4C
+		_queenMouthOpen1	5A50
+		_queenMouthOpen2	5A54
+		_queenColours	5A58
+		_princessBaseSprite	5A8E
+		_princessClosedEyes	5AC4
+		_princessOpenEyes	5ACC
+		_princessMouthClosed	5AD4
+		_princessMouthOpen1	5AD8
+		_princessMouthOpen2	5ADC
+		_princessColours	5AE0
+		_borderTop	5B16
+		_colourBorder	5B2A
+		_borderBottom	5B3E
+		_borderMid	5B52
+		_conversation11	5B66
+		_conversation12	5BB3
+		_conversation13	5C00
+		_conversation14	5C4D
+		_conversation15	5C9A
+		_conversation21	5CE7
+		_conversation22	5D34
+		_conversation23	5D81
+		_conversation31	5DCE
+		_conversation32	5E1B
+		_conversation33	5E68
+		_convScreenPalette	5EB5
+AREA _DATA_3
+	RADIX HEX
+	BASE 5EF5
+	SIZE 0000
+	ATTRIB REL CON
+AREA _CODE_3
+	RADIX HEX
+	BASE 4000
+	SIZE 25E1
+	ATTRIB REL CON
+	GLOBALS
+		_endingBkgTiles	4217
+		_endingBkgTilesNude	5217
+		_menuSprites	6217
+		_mouthOpen1	62B7
+		_mouthOpen2	62B9
+		_eyesClosed	62BB
+		_wink	62BE
+		_endingTiles	62C1
+AREA _DATA_4
+	RADIX HEX
+	BASE 65E1
+	SIZE 0000
+	ATTRIB REL CON
+AREA _CODE_4
+	RADIX HEX
+	BASE 4000
+	SIZE 2598
+	ATTRIB REL CON
+	GLOBALS
+		_badEndBkgTileData	4238
+		_badEndBkgTileDataNude	5238
+		_badEndingTiles	6238
+		_necklaceSprites	63A0
+		_mapColours	6430
+AREA _DATA_5
+	RADIX HEX
+	BASE 6598
+	SIZE 0000
+	ATTRIB REL CON
+AREA _CODE_5
+	RADIX HEX
+	BASE 4000
+	SIZE 227D
+	ATTRIB REL CON
+	GLOBALS
+		_updateGame	4000
+		_bkgTiles	44D2
+		_lvl2bkgTiles	4CD2
+		_nudePrincess	4ED2
+		_walkFrame1	4FF2
+		_walkFrame2	5112
+		_walkFrame3	5232
+		_punchFrame1	5352
+		_punchFrame2	5472
+		_takenDamageData	5592
+		_jumpFrame	56B2
+		_jumpFrameKick	57D2
+		_fallDownDead	58F2
+		_punchFist	5A12
+		_kickSprite	5A22
+		_shadow	5A42
+		_fireBall	5A62
+		_powerUps	5A72
+		_slimeFrames	5A92
+		_snakeFrames	5B92
+		_arrowFrames	5C92
+		_eyeBallMonsterFrames	5D52
+		_queenFrame1	5E52
+		_queenFrame2	5F72
+		_bkgMap	6092
+		_bkgMap2	60D2
+		_bkgMapDetail	6112
+		_winMap	6116
+		_bkgMapPalette	6152
+		_winMapPalette	6171
+		_spritePalette	61AD
+		_bkgPalette	61ED
+		_bkgPalette2	6235
+AREA _DATA_6
+	RADIX HEX
+	BASE 627D
+	SIZE 0000
+	ATTRIB REL CON
+AREA _CODE_6
+	RADIX HEX
+	BASE 4000
+	SIZE 0000
+	ATTRIB REL CON
+AREA _DATA_7
+	RADIX HEX
+	BASE 4000
+	SIZE 0000
+	ATTRIB REL CON
+AREA _CODE_7
+	RADIX HEX
+	BASE 4000
+	SIZE 0000
+	ATTRIB REL CON
+AREA _SFR
+	RADIX HEX
+	BASE 0000
+	SIZE 10000
+	ATTRIB ABS OVR
+	GLOBALS
+		_P1_REG	FF00
+		_SB_REG	FF01
+		_SC_REG	FF02
+		_DIV_REG	FF04
+		_TIMA_REG	FF05
+		_TMA_REG	FF06
+		_TAC_REG	FF07
+		_IF_REG	FF0F
+		_NR10_REG	FF10
+		_NR11_REG	FF11
+		_NR12_REG	FF12
+		_NR13_REG	FF13
+		_NR14_REG	FF14
+		_NR21_REG	FF16
+		_NR22_REG	FF17
+		_NR23_REG	FF18
+		_NR24_REG	FF19
+		_NR30_REG	FF1A
+		_NR31_REG	FF1B
+		_NR32_REG	FF1C
+		_NR33_REG	FF1D
+		_NR34_REG	FF1E
+		_NR41_REG	FF20
+		_NR42_REG	FF21
+		_NR43_REG	FF22
+		_NR44_REG	FF23
+		_NR50_REG	FF24
+		_NR51_REG	FF25
+		_NR52_REG	FF26
+		_LCDC_REG	FF40
+		_STAT_REG	FF41
+		_SCY_REG	FF42
+		_SCX_REG	FF43
+		_LY_REG	FF44
+		_LYC_REG	FF45
+		_DMA_REG	FF46
+		_BGP_REG	FF47
+		_OBP0_REG	FF48
+		_OBP1_REG	FF49
+		_WY_REG	FF4A
+		_WX_REG	FF4B
+		_KEY1_REG	FF4D
+		_VBK_REG	FF4F
+		_HDMA1_REG	FF51
+		_HDMA2_REG	FF52
+		_HDMA3_REG	FF53
+		_HDMA4_REG	FF54
+		_HDMA5_REG	FF55
+		_RP_REG	FF56
+		_BCPS_REG	FF68
+		_BCPD_REG	FF69
+		_OCPS_REG	FF6A
+		_OCPD_REG	FF6B
+		_SVBK_REG	FF70
+		_IE_REG	FFFF
+MODULES
+	FILE C:\gbdk\lib/gb/crt0.o
+		NAME Runtime
+	FILE ishallbequeen.o
+		NAME lcc31800
+	FILE rombank1.o
+		NAME lcc33840
+	FILE rombank2.o
+		NAME lcc74040
+	FILE rombank3.o
+		NAME lcc42360
+	FILE rombank4.o
+		NAME lcc75720
+	FILE rombank5.o
+		NAME lcc58440
+	FILE rombank6.o
+		NAME lcc71480
+	FILE rombank7.o
+		NAME lcc51320
+LIBRARIES
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE cgb.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE sfr.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE set_prop.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE scroll_b.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE mv_win.o
+	LIBRARY C:\gbdk\lib/gbz80/gbz80.lib
+		MODULE asm_string.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE rand.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE pad.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE mv_spr.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE get_wi_t.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE get_data.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE set_data.o
+	LIBRARY C:\gbdk\lib/gbz80/gbz80.lib
+		MODULE div.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE serial.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE cpy_data.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE set_wi_t.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE arand.o
+	LIBRARY C:\gbdk\lib/gbz80/gbz80.lib
+		MODULE reverse.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE scroll_w.o
+	LIBRARY C:\gbdk\lib/gbz80/gbz80.lib
+		MODULE strncat.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE get_xy_t.o
+	LIBRARY C:\gbdk\lib/gbz80/gbz80.lib
+		MODULE mul.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE get_spr.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE scroll_s.o
+	LIBRARY C:\gbdk\lib/gbz80/gbz80.lib
+		MODULE strncmp.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE mv_bkg.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE set_xy_t.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE set_spr.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE delay.o
+	LIBRARY C:\gbdk\lib/gbz80/gbz80.lib
+		MODULE strcat.o
+	LIBRARY C:\gbdk\lib/gbz80/gbz80.lib
+		MODULE strncpy.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE get_bk_t.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE get_prop.o
+	LIBRARY C:\gbdk\lib/gbz80/gbz80.lib
+		MODULE strlen.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE sgb.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE hiramcpy.o
+	LIBRARY C:\gbdk\lib/gb/gb.lib
+		MODULE set_bk_t.o
+USERBASEDEF
+	_CODE=0x0200
+	_DATA=0xC0A0
+	_CODE_1=0x4000
+	_CODE_2=0x4000
+	_CODE_3=0x4000
+	_CODE_4=0x4000
+	_CODE_5=0x4000
+	_CODE_6=0x4000
+	_CODE_7=0x4000
+	_DATA_0=0xA000
+USERGLOBALDEF
+	.OAM=0xC000
+	.STACK=0xE000
+	.refresh_OAM=0xFF80
+	.init=0x0000
