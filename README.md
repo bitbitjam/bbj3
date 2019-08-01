@@ -240,17 +240,17 @@ Maybe we will try to improve it, after the jam has ended.
 
 ### [Check entry and source code](/[NES]%20Drakaina/) - [entry removed from Game Jolt] - [Github](https://github.com/piloChambert/nesProject)
 
-Best Red Princess Game
+## Best Red Princess Game
 
   1.  Where’s My Cake – HuCABBAGE (GBC)
   2.  I Shall Be Queen – resfresh games (GBC)
 
-Best platform use
+## Best platform use
 
   1.  Revenge of the Killer Princesses – Paul Scott Robson (Netronics Elf II)
   2.  Downforce – Pixel Bastards (Genesis)
 
-Funniest Game
+## Funniest Game
 
   1.  Where’s My Cake – HuCABBAGE (GBC)
   2.  Princess Red Keyboard Warrior – Montie Mongoose (286)
