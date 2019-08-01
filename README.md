@@ -69,4 +69,57 @@ This is a C64 game (yes, for that old but good Commodore machine!) made for bitb
 ### [Check entry and source code](/[C64]%20Paintress/) - [view on Game Jolt](http://gamejolt.com/games/paintress-c64/160620)
 
 
+## Downforce (Megadrive / Genesis)
+
+![img](/[MD]%20Downforce/title.jpg?raw=true) ![img](/[MD]%20Downforce/ingame.jpg?raw=true)
+
+We made this Sega Genesis/Mega Drive game in 7 days for the #bitbitjam3.
+
+* Code: [@Pocket_Lucho](https://twitter.com/Pocket_Lucho)
+* Art:  [@ManuTrigger](https://twitter.com/ManuTrigger) & [@PixelArtM](https://twitter.com/PixelArtM)
+* Music: [@DavidBonus](https://twitter.com/DavidBonus)
+
+### [Check entry and source code](/[MD]%20Downforce/) - [view on Game Jolt](http://gamejolt.com/games/downforce/162163)
+
+
+## Princess Massacre - Frodewin (Amiga 500)
+
+![img](/[A500]%20Princess%20Massacre/intro.png?raw=true) ![img](/[A500]%20Princess%20Massacre/ingame.png?raw=true)
+
+Slaughter vicious teddy bears as the princess of candy land in this cool retro-style game made for A500.
+
+### [Check entry and source code](/[A500]%20Princess%20Massacre/) - [view on Game Jolt](https://gamejolt.com/games/princess-massacre/162180)
+
+
+## Flame Princess Adventure Time - Bytemaniacos (ZX Spectrum)
+
+![img](/[ZX]%20Flame%20Princess%20Adventure%20Time/title.jpg?raw=true) ![img](/[ZX]%20Flame%20Princess%20Adventure%20Time/ingame.jpg?raw=true)
+
+Finn was captured! Ice king finally cath him, and Flame Princess are very angry. Rescue Finn and kick ass Ice King. Fin Keys for open doors, use your fire with measure (it's limited!). And find Finn, he is into a chest in Ice King mountain!
+
+### [Check entry and source code](/[ZX]%20Flame%20Princess%20Adventure%20Time/) - [view on Game Jolt](http://gamejolt.com/games/flame-princess-adventure-time/162224)
+
+
+## Hilda (Super Nintendo)
+
+![img](/[SNES]%20Hilda/title.jpg?raw=true)
+
+The game features the story of Hilda, a young princess who lost all of her family in the war against the enemy. All but her older sister, who is missing.
+
+* Art:    Orochii Zouveleki
+* Music:  Orochii and EN.i
+* Coding: Orochii and EN.i
+
+### [Check entry and source code](/[SNES]%20Hilda/) - [view on Game Jolt](http://gamejolt.com/games/hilda/162284)
+
+
+## Shattering jaws - MoonWatcherMD (Megadrive / Genesis)
+
+![img](/[MD]%20Shattering%20jaws/title.png?raw=true) ![img](/[MD]%20Shattering%20jaws/ingame.png?raw=true)
+
+You are little Timmy. Be a good boy and pay attention to mom's advice. Exceed level 4 and get your reward. Be smart, you are the slowest thing out there, learn how to use boats to your advantage. It may be challenging sometimes, don't give up!
+
+Almost every code is written from scratch. Some graphics are ripped off and others created by my and. No music at all. Enjoy!
+
+### [Check entry and source code](/[MD]%20Shattering%20jaws/) - [view on Game Jolt](http://gamejolt.com/games/shattering-jaws-megadrive/162358)
 
